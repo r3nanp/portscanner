@@ -1,3 +1,4 @@
+''' Todos os direitos reservados a Renan Pereira de Souza '''
 import socket 
 
 portas = [21, 23, 80, 443, 8080, 3306]
