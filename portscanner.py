@@ -7,4 +7,4 @@ for port in ports:
 	client.settimeout(0.1)
 	code = client.connect_ex(('http://example.com', port))
 	if codigo == 0:
-		print port, 'OPEN'
+		print( port, 'OPEN')
