@@ -6,5 +6,5 @@ for port in ports:
 	client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	client.settimeout(0.1)
 	code = client.connect_ex(('http://example.com', port))
-	if codigo == 0:
-		print( port, 'OPEN')
+	if code == 0:
+		print(port, 'OPEN')
