@@ -1,10 +1,10 @@
 ''' Todos os direitos reservados a Renan Pereira de Souza '''
 import socket 
 
-doors = [21, 23, 80, 443, 8080, 3306]
-for door in doors:
-	cliente = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-	cliente.settimeout(0.1)
-	codigo = cliente.connect_ex(('http://example.com', door))
+ports = [21, 23, 80, 443, 8080, 3306]
+for port in ports:
+	client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+	client.settimeout(0.1)
+	code = client.connect_ex(('http://example.com', port))
 	if codigo == 0:
-		print door, 'OPEN'
+		print port, 'OPEN'
