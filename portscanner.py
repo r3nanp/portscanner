@@ -7,7 +7,8 @@ N = '\033[0m'
 
 
 q = 'which ports do you wanna werify? '
-ports = input(q).split(" ")
+ports = list(map(int, input(q).split(' ')))
+
 
 website = input('what website you wanna verify? ')
 
