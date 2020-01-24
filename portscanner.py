@@ -1,10 +1,30 @@
-''' Todos os direitos reservados a Renan Pereira de Souza '''
-import socket 
+import socket, os, time
 
-ports = [21, 23, 80, 443, 8080, 3306]
+# Color
+B = '\033[1m'
+R = '\033[31m'
+N = '\033[0m'
+
+
+q = 'which ports do you wanna werify? '
+ports = input(q).split(" ")
+
+website = input('what website you wanna verify? ')
+
+os.system('clear')
+
+print (B + "[#] The verification started on " + website + "|| Port: " + str(ports))
+
+time.sleep(2)
+
+os.system('clear')
+
+# Here is where the magic happens
 for port in ports:
-	client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-	client.settimeout(0.1)
-	code = client.connect_ex(('http://example.com', port))
-	if code == 0:
-		print(port, 'OPEN')
+    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    client.settimeout(0.1)
+    code = client.connect_ex((website, port))
+    if code == 0:
+        print(port, 'OPEN')
+    else:
+        print('THIS PORT IS NOT OPEN')
