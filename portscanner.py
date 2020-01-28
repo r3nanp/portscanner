@@ -1,19 +1,24 @@
-import socket, os, time
+#!/usr/bin/python 
+#coding: utf-8
+
+import socket, os, time, sys
 
 # Color
 B = '\033[1m'
 R = '\033[31m'
 N = '\033[0m'
+G = '\033[32m'
 
+print (B+G+"> Portscanner Console")
 
-q = 'which ports do you wanna werify? '
+q = '[$] T@rget p0rts: '
 ports = list(map(int, input(q).split(' ')))
 
-website = input('what website you wanna verify? ')
+website = input('[$] Websit3: ')
 
 os.system('clear')
 
-print (R+ "[#] The verification started on " + website + " || Port: " + str(ports))
+print (B+R+ "[#] The verification started on " + website + " || Port: " + str(ports))
 
 time.sleep(2)
 
@@ -28,4 +33,7 @@ try:
         else:
             print(port, 'THIS PORT IS NOT OPEN')
 except:
-    print('THERE IS AN ERROR')
+    print('[!] THERE IS AN ERROR')
+
+time.sleep(0.3)
+sys.exit(1)
