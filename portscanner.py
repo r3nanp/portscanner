@@ -1,5 +1,6 @@
 #!/usr/bin/python 
 #coding: utf-8
+#Author: neo (renan)
 
 import socket, os, time, sys
 
@@ -9,6 +10,18 @@ R = '\033[31m'
 N = '\033[0m'
 G = '\033[32m'
 
+### Code time ######
+from datetime import datetime
+now = datetime.now()
+minute = now.minute
+hour = now.hour
+day = now.day
+month = now.month
+year = now.year
+##################
+
+print (B+G+'[!] The scan started on {0}.{1} | {2}-{3}-{4}'.format(hour, minute, day, month, year))
+print('\n')
 print (B+G+"> Portscanner Console")
 
 q = '[$] T@rget p0rts: '
