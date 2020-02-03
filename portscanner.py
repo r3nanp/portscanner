@@ -20,7 +20,7 @@ month = now.month
 year = now.year
 ##################
 
-print (B+G+'[!] The scan started on {0}.{1} | {2}-{3}-{4}'.format(hour, minute, day, month, year))
+print (B+G+'[!] The scan started on {0}:{1} | {2}-{3}-{4}'.format(hour, minute, day, month, year))
 print('\n')
 print (B+G+"> Portscanner Console")
 
