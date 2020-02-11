@@ -39,7 +39,7 @@ try:
 # Here is where the magic happens
     for port in ports:
         client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        client.settimeout(0.1)
+        client.settimeout(0.5)
         code = client.connect_ex((website, port))
         if code == 0:
             print(port, 'OPEN')
