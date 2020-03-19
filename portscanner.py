@@ -65,7 +65,7 @@ scan_list.close()
 
 print('\n')
 
-print(B+G'~#~ Ports written in portscan.txt \n')
+print(B+G+'~#~ Ports written in portscan.txt \n')
     
 
 time.sleep(0.3)
