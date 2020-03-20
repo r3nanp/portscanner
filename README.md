@@ -1,5 +1,5 @@
 # Portscanner
-It's a available portscanner from a vulnerable website.
+It's a available port scanner from a vulnerable website.
 
 ### Prerequisites
 
