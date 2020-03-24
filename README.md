@@ -18,4 +18,7 @@ apt-get install git Python
 git clone (https://github.com/r3nanp/portscan/)
 
 ```
-
+### Executing 
+```
+python portscanner.py
+```
