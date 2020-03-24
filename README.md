@@ -6,22 +6,22 @@ It's a available port scanner from a vulnerable website.
 
 ### Prerequisites
 
-```
-git
+*git
 
-python v.3
+*python v.3
 
-```
-
-### Installing
+### Installing and Executing
 
 ```
-apt-get install git Python
+apt-get install git python
 
-git clone (https://github.com/r3nanp/portscan/)
-
+git clone (https://github.com/r3nanp/portscanner/)
 ```
-### Executing 
+ 
+```
+cd portscanner
+```
+
 ```
 python portscanner.py
 ```
