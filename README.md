@@ -6,9 +6,9 @@ It's a available port scanner from a vulnerable website.
 
 ### Prerequisites
 
-*git
+* git
 
-*python v.3
+* python v.3
 
 ### Installing and Executing
 
