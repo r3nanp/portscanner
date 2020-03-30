@@ -15,7 +15,7 @@ It's a available port scanner from a vulnerable website.
 ```
 apt-get install git python
 
-git clone (https://github.com/r3nanp/portscanner/)
+git clone https://github.com/r3nanp/portscanner/
 ```
  
 ```
