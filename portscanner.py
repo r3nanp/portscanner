@@ -15,20 +15,19 @@ os.system('clear')
 print (B+G+'[!] The scan started on {0}:{1} | {2}-{3}-{4}'.format(hour, minute, day, month, year))
 
 def main():
-    
-    print(banner)
-    portscan = input(G+"\nPortscanner Console > ")
-    if portscan == '1' or portscan == '01':
+    print('\n'+banner)
+    portscan = input(G+"Portscanner console > ")
+    if portscan.strip() == '1' or portscan.strip() == '01':
         try:
-            q =  '[$] T@rget p0rts: '
+            q =  '\n[$] T@rget p0rts: '
             ports = list(map(int, input(q).rstrip().split(' ')))
             
             #milliseconds
             delay = float(input('[$] S3t th3 t1m30ut: '))
             
         except ValueError:
-            print(R+'\n[!] Wrong Input \n')
-            print(R+'[!] Restarting...')
+            print(R+'\n[!] Wrong Input')
+            print('[!] Restarting...')
             time.sleep(1)
             restart_program()
             
@@ -54,7 +53,8 @@ def main():
             print(R+'[!] Restarting...')
             time.sleep(1)
             restart_program()
-             
+            
+        ##Transform in a list    
         p = list(map(int, ports))
         
         ## Saving it into a file ##
@@ -68,16 +68,12 @@ def main():
         ###########################
         
         print(B+G+'\n~#~ Ports written in portscan.txt \n')
-        
-       
-        time.sleep(0.3)
-        sys.exit(1)
+        exit()
          
     elif portscan == '2' or portscan == '02':
-        time.sleep(0.3)
-        sys.exit(1)
+        exit()
     else:
-        print(R+'[!] Wrong Input\n')
+        print(R+'[!] Wrong Input')
         print('[!]Restarting...\n')
         restart_program()
               
