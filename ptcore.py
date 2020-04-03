@@ -23,6 +23,4 @@ hour = now.hour
 day = now.day
 month = now.month
 year = now.year
-##################
-
-       
+##################      
