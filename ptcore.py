@@ -2,11 +2,6 @@ from datetime import datetime
 
 import sys, os, time
 
-##### Color #####
-R = '\033[31m'
-G = '\033[32m'
-#######
-
 banner = '''[1] Start the scan
 [2] Exit'''
 

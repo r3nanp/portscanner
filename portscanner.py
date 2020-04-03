@@ -16,7 +16,7 @@ print (B+G+'[!] The scan started on {0}:{1} | {2}-{3}-{4}'.format(hour, minute, 
 
 def main():
     print('\n'+banner)
-    portscan = input(G+"Portscanner console > ")
+    portscan = input("Portscanner console > ")
     if portscan.strip() == '1' or portscan.strip() == '01':
         try:
             q =  '\n[$] T@rget p0rts: '
@@ -33,9 +33,9 @@ def main():
             
         website = input('[$] Websit3 or IP: ')
         
-        print (B+G+ "\n[#] The verification started on " + website + " || Port: " + str(ports))
+        print ("\n[#] The verification started on " + website + " || Port: " + str(ports))
         
-        time.sleep(2)
+        time.sleep(1)
         
         # Here is where the magic happens
         try:
@@ -50,7 +50,7 @@ def main():
                     
         except:
             print(R+'\n[!] There is an error')
-            print(R+'[!] Restarting...')
+            print('[!] Restarting...')
             time.sleep(1)
             restart_program()
             
@@ -70,7 +70,7 @@ def main():
         print(B+G+'\n~#~ Ports written in portscan.txt \n')
         exit()
          
-    elif portscan == '2' or portscan == '02':
+    elif portscan.strip() == '2' or portscan.strip() == '02':
         exit()
     else:
         print(R+'[!] Wrong Input')
