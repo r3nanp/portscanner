@@ -25,7 +25,7 @@ def main():
             #milliseconds
             delay = float(input('[$] S3t th3 t1m30ut: '))
             
-        except ValueError:
+        except:
             print(R+'\n[!] Wrong Input')
             print('[!] Restarting...')
             time.sleep(1)
@@ -58,13 +58,15 @@ def main():
         p = list(map(int, ports))
         
         ## Saving it into a file ##
-        with open('portscan.txt', 'w') as scan_list:
-            scan_list.write(str(website) +'\n')
+        try:
+            with open('portscan.txt', 'w') as scan_list:
+                scan_list.write(str(website) +'\n')
         
-        for scan in p:
-            with open('portscan.txt', 'at') as f:
-                f.write(str(scan)+' PORT CHECKED'+'\n')        
-        scan_list.close()
+            for scan in p:
+                with open('portscan.txt', 'at') as f:
+                    f.write(str(scan)+' PORT CHECKED'+'\n')        
+        finally:
+            scan_list.close()
         ###########################
         
         print(B+G+'\n~#~ Ports written in portscan.txt \n')
