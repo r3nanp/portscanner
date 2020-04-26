@@ -35,7 +35,4 @@ def restart_program():
 ######################
 def exit():
     time.sleep(0.3)
-    sys.exit(1)
-    
-
-      
+    sys.exit()          
