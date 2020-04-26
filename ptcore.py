@@ -7,11 +7,6 @@ R = '\033[31m'
 N = '\033[0m'
 G = '\033[32m'
 
-banner = '''[1] Start the scan
-[2] Exit'''
-
-verf = B+G+'[!] The scan started on {0}:{1} | {2}-{3}-{4}'.format(hour, minute, day, month, year)
-
 ### Code time ######
 now = datetime.now()
 minute = now.minute
@@ -20,6 +15,12 @@ day = now.day
 month = now.month
 year = now.year
 ##################
+
+banner = '''[1] Start the scan
+[2] Exit'''
+
+verf = (B+G+'[!] The scan started on {0}:{1} | {2}-{3}-{4}'.format(hour, minute, day, month, year))
+
 def wrongInput():
     print(R+'\n[!] There is an error')
     print('[!] Restarting...')
