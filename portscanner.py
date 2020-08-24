@@ -1,5 +1,3 @@
-#coding: utf-8
-#Author: n3o (Renan)
 from ptcore import *
 import socket, os, time, sys
 
