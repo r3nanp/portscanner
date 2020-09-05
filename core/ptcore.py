@@ -22,17 +22,17 @@ banner = '''[1] Start the scan
 verf = (B+G+'[!] The scan started on {0}:{1} | {2}-{3}-{4}'.format(hour, minute, day, month, year))
 
 def wrongInput():
-    print(R+'\n[!] There is an error')
-    print('[!] Restarting...')
-    time.sleep(1)
-    restart_program()
-            
+  print(R+'\n[!] There is an error')
+  print('[!] Restarting...')
+  time.sleep(1)
+  restart_program()
+
 ###### Restart the program ####
 def restart_program():
-    python = sys.executable
-    os.execl(python, python, * sys.argv)
-    curdir = os.getcwd()
+  python = sys.executable
+  os.execl(python, python, * sys.argv)
+  curdir = os.getcwd()
 ######################
 def exit():
-    time.sleep(0.3)
-    sys.exit()          
+  time.sleep(0.3)
+  sys.exit()

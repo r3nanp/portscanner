@@ -2,7 +2,7 @@
 It's a available port scanner from a vulnerable website.
 
 ### Screenshot
-<img src ="portscanner.png">
+<img src="./.github/portscanner.png">
 
 ### Prerequisites
 
@@ -15,9 +15,9 @@ It's a available port scanner from a vulnerable website.
 ```
 apt-get install git python
 
-git clone https://github.com/r3nanp/portscanner/
+git clone https://github.com/r3nanp/portscanner/.git
 ```
- 
+
 ```
 cd portscanner
 ```
