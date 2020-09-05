@@ -1,4 +1,4 @@
-from core import ptcore.py
+from core import ptcore
 import socket, os, time, sys
 
 os.system('clear')
@@ -10,10 +10,11 @@ def main():
   if portscan.strip() == '1' or portscan.strip() == '01':
     try:
       port =  '\n[$] T@rget p0rts: '
-      ##Transform str in a list of int
+
+      ##Transform a string in a list of integer
       listPort = list(map(int, input(port).rstrip().split(' ')))
 
-      #milliseconds
+      #Milliseconds
       delay = float(input('[$] S3t th3 t1m30ut: '))
 
       except:
@@ -25,20 +26,19 @@ def main():
 
         time.sleep(1)
 
-        # Here is where the magic happens
         try:
           for port in listPort:
             # TCP/IP connection
             client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-            # timeout in ms
+            # Timeout in ms
             client.settimeout(delay)
             code = client.connect_ex((website, port))
             if code == 0:
-            #if it's a 0, the port is open
-                print(str(port), 'OPEN')
+            #If the code is a 0, the port is open
+              print(str(port), 'OPEN')
             else:
-                print(str(port), 'CLOSE')
+              print(str(port), 'CLOSE')
 
         except:
           wrongInput()
