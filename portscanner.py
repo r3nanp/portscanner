@@ -1,4 +1,4 @@
-from core import *
+from core import ptcore
 import socket, os, time, sys
 
 os.system('clear')
