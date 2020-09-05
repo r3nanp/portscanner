@@ -17,55 +17,55 @@ def main():
       #Milliseconds
       delay = float(input('[$] S3t th3 t1m30ut: '))
 
+    except:
+      wrongInput()
+
+      website = input('[$] Websit3 or IP: ')
+
+      print ('\n[#] The verification started on ' + website + ' || Port: ' + str(listPort))
+
+      time.sleep(1)
+
+      try:
+        for port in listPort:
+        # TCP/IP connection
+          client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+          # Timeout in ms
+          client.settimeout(delay)
+          code = client.connect_ex((website, port))
+          if code == 0:
+          #If the code is a 0, the port is open
+            print(str(port), 'OPEN')
+          else:
+            print(str(port), 'CLOSE')
+
       except:
         wrongInput()
 
-        website = input('[$] Websit3 or IP: ')
+      ##Transform str in a list of int
+      transformList = list(map(int, listPort))
 
-        print ('\n[#] The verification started on ' + website + ' || Port: ' + str(listPort))
+      ## Saving it in a file ##
+      try:
+        with open('portscan.txt', 'w') as scan_list:
+          scan_list.write(str(website) +'\n')
 
-        time.sleep(1)
+        for scan in transformList:
+          with open('portscan.txt', 'at') as f:
+            f.write(str(scan)+' PORT CHECKED'+'\n')
 
-        try:
-          for port in listPort:
-            # TCP/IP connection
-            client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+      finally:
+        scan_list.close()
 
-            # Timeout in ms
-            client.settimeout(delay)
-            code = client.connect_ex((website, port))
-            if code == 0:
-            #If the code is a 0, the port is open
-              print(str(port), 'OPEN')
-            else:
-              print(str(port), 'CLOSE')
+      print(B+G+'\n~#~ Ports written in portscan.txt \n')
+      exit()
+      ###########################
 
-        except:
-          wrongInput()
-
-        ##Transform str in a list of int
-        transformList = list(map(int, listPort))
-
-        ## Saving it in a file ##
-        try:
-          with open('portscan.txt', 'w') as scan_list:
-            scan_list.write(str(website) +'\n')
-
-          for scan in transformList:
-            with open('portscan.txt', 'at') as f:
-              f.write(str(scan)+' PORT CHECKED'+'\n')
-
-        finally:
-          scan_list.close()
-
-        print(B+G+'\n~#~ Ports written in portscan.txt \n')
-        exit()
-        ###########################
-
-    elif portscan.strip() == '2' or portscan.strip() == '02':
-        exit()
-    else:
-        wrongInput()
+  elif portscan.strip() == '2' or portscan.strip() == '02':
+    exit()
+  else:
+    wrongInput()
 
 if __name__ == '__main__':
     main()
