@@ -19,7 +19,7 @@ year = now.year
 banner = '''[1] Start the scan
 [2] Exit'''
 
-verf = (B+G+'[!] The scan started on {0}:{1} | {2}-{3}-{4}'.format(hour, minute, day, month, year))
+hourTime = (B+G+'[!] The scan started on {0}:{1} | {2}-{3}-{4}'.format(hour, minute, day, month, year))
 
 def wrongInput():
   print(R+'\n[!] There is an error')

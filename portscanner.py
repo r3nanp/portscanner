@@ -1,8 +1,8 @@
-from core import ptcore
+from core import ptcore.py
 import socket, os, time, sys
 
 os.system('clear')
-print(verf)
+print(hourTime)
 
 def main():
   print('\n'+banner)
